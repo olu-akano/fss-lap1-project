@@ -16,10 +16,9 @@ app.post('/', (req,res) => {
     let newEntry = {... req.body}
     data.push(newEntry)
     let newEntryString = JSON.stringify(data, null, 2)
-    fs.writeFile('data.json', newEntryString, (err) => {
+    fs.writeFile('data.json', newEntryString, (success) => {
         console.log('all done')
     })
-    data.push(newEntry)
     res.status(201).json({message:'done'})
 })
 
