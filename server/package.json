@@ -7,7 +7,7 @@
     "test": "jest --silent --watchAll",
     "coverage": "jest --coverage --silent",
     "start-dev": "open ../client/index.html & node index.js",
-    "dev": "nodemon index.js" 
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
