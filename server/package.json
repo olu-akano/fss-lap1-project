@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest --silent --watchAll",
     "coverage": "jest --coverage --silent",
-    "start-dev": "open ../client/index.html & node index.js",
-    "dev": "nodemon index.js" 
+    "start-dev": "start ../client/index.html & node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-fetch": "^3.0.0"
   }
 }
