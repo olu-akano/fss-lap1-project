@@ -1,9 +1,6 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "jest --silent --watchAll",
     "coverage": "jest --coverage --silent",
     "start-dev": "open ../client/index.html & node index.js",
