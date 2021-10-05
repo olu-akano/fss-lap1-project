@@ -1,12 +1,11 @@
 const journalEntry = document.getElementById('journalentry');
 const getEntry = document.getElementById('entryDisplay')
-const testing = document.getElementById('testing')
 
 journalEntry.addEventListener('submit', (e) => {
     e.preventDefault();
     location.reload()
     const entry = {
-        body: e.target.textentry.value
+        body: e.target.textentry.value 
     }
 
     const methods = {
@@ -38,7 +37,6 @@ async function getAll(){
 }
 
 
-
 async function getSingleEntry(){
     try{
         let resp = await fetch('http://localhost:5500/')
@@ -55,29 +53,4 @@ async function getSingleEntry(){
     }
 }
 
-async function getAllComments(){
-    try{
-        let resp = await fetch('http://localhost:5500/comment/comments')
-        let jsonData = await resp.json()
-        for(let j = 0; j < jsonData.length; j++){
-            let id = jsonData[j].id
-            console.log(id)
-            let respId = await fetch(`http://localhost:5500/comments/${id}`)
-            let jsonDataComment = await respId.json()
-            let commentBox = document.getElementById('card--container')
-            for(let z = 0; z < jsonDataComment.length; z++){
-                
-                console.log(jsonDataComment[z])
-                let comment = document.createElement('div')
-                comment.id = "comments"
-                comment.innerHTML = `comments: ${jsonDataComment[z]}`
-                commentBox.append(comment)
-            }
-        }
-    }catch(err){
-        console.error(err)
-    }
-}
-
 getAll()
-getAllComments()
