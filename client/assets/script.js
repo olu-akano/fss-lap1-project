@@ -21,8 +21,6 @@ journalEntry.addEventListener('submit', (e) => {
         .then(res => res.json())
 })
 
-testing.addEventListener('click', getSingleEntry)
-
 async function getAll(){
     try{
         let resp = await fetch('http://localhost:5500/')
