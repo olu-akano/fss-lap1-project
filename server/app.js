@@ -15,6 +15,7 @@ app.get('/:enid', getEntryById)
 app.get('/comment/comments', getAllComments)
 app.get('/comments/:cid', getCommentById)
 
+
 function getCommentById(req, res){
     let id = parseInt(req.params.cid)
     let selectedComment = data.find(c => c.id === id)
@@ -39,7 +40,8 @@ function getAllComments(req, res){
 
 app.post('/', (req,res) => {
     let newID = data.length + 1
-    let newEntry = {id: newID,... req.body}
+    let comment = []
+    let newEntry = {id: newID, ... req.body, comment}
     data.push(newEntry)
     let newEntryString = JSON.stringify(data, null, 2)
     fs.writeFile('data.json', newEntryString, (success) => {
