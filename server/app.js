@@ -11,35 +11,9 @@ const data = require('./data.json')
 app.get('/', (req,res) =>{
     res.json(data)
 })
-app.get('/:enid', getEntryById)
-app.get('/comments', getAllComments)
-app.get('/comments/:cid', getCommentById)
-
-function getCommentById(req, res){
-    let id = parseInt(req.params.cid)
-    let selectedComment = data.find(c => c.id === id)
-    res.json(selectedComment.comments)
-}
-
-function getEntryById(req, res){
-    let entryId = parseInt(req.params.enid)
-    let selectedEntry = data.find(e => e.id === entryId)
-    res.json(selectedEntry)
-}
-
-function getAllComments(req, res){
-    let comments = [];
-    for(let i = 0; i < data.length; i++){
-        let commentContent = data[i]['comments']
-        let commentId = data[i]['id']
-        comments[i] = {'comment': commentContent,'id': commentId}
-    }
-    return(res.json(comments))
-}
 
 app.post('/', (req,res) => {
-    let newID = data.length + 1
-    let newEntry = {id: newID,... req.body}
+    let newEntry = {... req.body}
     data.push(newEntry)
     let newEntryString = JSON.stringify(data, null, 2)
     fs.writeFile('data.json', newEntryString, (success) => {
