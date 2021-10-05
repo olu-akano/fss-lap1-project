@@ -14,6 +14,7 @@ app.get('/', (req,res) =>{
 app.get('/:enid', getEntryById)
 app.get('/comment/comments', getAllComments)
 app.get('/comments/:cid', getCommentById)
+app.post('/comments/:cid', addComment)
 
 
 function getCommentById(req, res){
@@ -40,8 +41,8 @@ function getAllComments(req, res){
 
 app.post('/', (req,res) => {
     let newID = data.length + 1
-    let comment = []
-    let newEntry = {id: newID, ... req.body, comment}
+    let comments = []
+    let newEntry = {id: newID, ... req.body, comments}
     data.push(newEntry)
     let newEntryString = JSON.stringify(data, null, 2)
     fs.writeFile('data.json', newEntryString, (success) => {
@@ -49,5 +50,20 @@ app.post('/', (req,res) => {
     })
     res.status(201).json({message:'done'})
 })
+
+function addComment(req,res){
+    let newComment = {... req.body}
+    let arrNewComment = Object.values(newComment)
+    let commentElem = arrNewComment[0]
+    let commentId = parseInt(req.params.cid)
+    data[commentId - 1]['comments'].push(commentElem)
+    console.log(data[commentId]['comments'])
+    let newCommentString = JSON.stringify(data, null, 2)
+    fs.writeFile('data.json', newCommentString, (success) => {
+        console.log('all done')
+    })
+    res.status(201).json({message:'done'})
+
+}
 
 module.exports = {app, port};
