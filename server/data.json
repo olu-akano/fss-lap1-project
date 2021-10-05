@@ -11,13 +11,12 @@
   },
   {
     "id": 2,
-    "body": "testing id",
+    "title": "example2",
+    "body": "example body2",
+    "gifUrl": "url2",
     "comments": [
-      "example"
+      "example comments2",
+      "1st entry second comment 2"
     ]
-  },
-  {
-    "id": 3,
-    "body": "test body"
   }
 ]

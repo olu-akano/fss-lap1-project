@@ -6,14 +6,15 @@ app.use(express.json())
 const port = 5500;
 app.use(cors());
 const data = require('./data.json')
-
+comment1 = 'hello'
 
 app.get('/', (req,res) =>{
     res.json(data)
 })
 app.get('/:enid', getEntryById)
-app.get('/comments', getAllComments)
+app.get('/comment/comments', getAllComments)
 app.get('/comments/:cid', getCommentById)
+
 
 function getCommentById(req, res){
     let id = parseInt(req.params.cid)
@@ -32,14 +33,15 @@ function getAllComments(req, res){
     for(let i = 0; i < data.length; i++){
         let commentContent = data[i]['comments']
         let commentId = data[i]['id']
-        comments[i] = {'comment': commentContent,'id': commentId}
+        comments[i] = {'comment': commentContent,'id':commentId}
     }
-    return(res.json(comments))
+    res.json(comments)
 }
 
 app.post('/', (req,res) => {
     let newID = data.length + 1
-    let newEntry = {id: newID,... req.body}
+    let comment = []
+    let newEntry = {id: newID, ... req.body, comment}
     data.push(newEntry)
     let newEntryString = JSON.stringify(data, null, 2)
     fs.writeFile('data.json', newEntryString, (success) => {
