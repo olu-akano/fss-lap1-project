@@ -3,7 +3,6 @@ const getEntry = document.getElementById('entryDisplay')
 
 journalEntry.addEventListener('submit', (e) => {
     e.preventDefault();
-    location.reload()
     const entry = {
         body: e.target.textentry.value 
     }
