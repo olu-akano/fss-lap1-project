@@ -18,6 +18,12 @@ body {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
     
 }
 #card--container {
@@ -25,7 +31,7 @@ body {
     margin-top: 10px;
     border: 1px solid #000;
     display: grid;
-    height: 1000px;
+    min-height: 1000px;
     width: 1000px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr; 
@@ -38,5 +44,52 @@ body {
     width: 300px;
     text-align: center;
     font-size: 1.5em;
-
 }
+a {
+    text-decoration: none;
+}
+#textentry {
+    width: 300px;
+    height: 100px;
+    vertical-align: top;
+    resize: none;
+}
+#thread {
+    border: 1px solid #000;
+    text-align: center;
+}
+#comment-box {
+    position: relative;
+    height: 1000px;
+    border: 1px solid #000;
+}
+.commentOnPage {
+    border: 1px solid #000;
+    min-height: 10px;
+}
+#commententry {
+    width: 600px;
+    height: 100px;
+    vertical-align: top;
+    padding-left:0;
+    padding-top:0;
+    padding-bottom:0.4em;
+    padding-right: 0.4em;
+    resize: none;
+}
+#commentOnPost {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+#footer {
+    border: 1px solid #000;
+    min-height: 35px;
+    min-width: 100%;
+    margin: 5px 0px 0px 0px;
+}
+
