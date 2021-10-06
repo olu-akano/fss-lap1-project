@@ -85,8 +85,11 @@ body {
     border: 1px solid #000;
 }
 .commentOnPage {
+    margin: 10px auto;
     border: 1px solid #000;
     min-height: 10px;
+    width: 90%;
+    padding: 10px;
 }
 #commententry {
     width: 600px;
@@ -215,3 +218,25 @@ body {
     border-radius: 5px;
 }
 
+p {
+    border-top: 5px solid red;
+}
+div {
+    border-top: 5px solid red;
+}
+.gif {
+    /* border: 1px solid #000;
+    min-width: 100px;
+    min-height: 100px;
+    z-index: 999;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center; */
+    border: 1px solid #000;
+    background-color: #F7F7F7;
+    min-height: 90%;
+    min-width: 90%;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
