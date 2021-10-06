@@ -27,11 +27,15 @@ async function getThread(){
     try{
         let respId = await fetch(`http://localhost:5500/${id}`)
         let jsonDataEntry = await respId.json()
+        let figGif = document.getElementById('seeGif')
         let thread = document.getElementById('thread')
         let threadBody = document.createElement('h2')
+        let threadGif = document.createElement('img')
         threadBody.id = 'threadBody'
+        threadGif.src = jsonDataEntry.siteUrl
         threadBody.innerHTML = `${jsonDataEntry.body}`
         thread.append(threadBody)
+        figGif.append(threadGif)
         let commentArr = jsonDataEntry.comments
         for(let i = 0; i < commentArr.length; i++){
             let commentBody = document.getElementById('comment-box')
