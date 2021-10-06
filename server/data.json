@@ -77,5 +77,11 @@
     "body": "new post should not have a gif",
     "siteUrl": "https://media4.giphy.com/media/28GHfhGFWpFgsQB4wR/giphy.gif?cid=1807b742m931xguoykxy31uqjpj98a25br5x4q2edc09z3e4&rid=giphy.gif&ct=g",
     "comments": []
+  },
+  {
+    "id": 11,
+    "siteUrl": "",
+    "body": "no gif",
+    "comments": []
   }
 ]
