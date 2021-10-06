@@ -3,9 +3,10 @@ const getEntry = document.getElementById('entryDisplay')
 
 journalEntry.addEventListener('submit', (e) => {
     e.preventDefault();
-    location.reload()
+    
     const entry = {
         body: e.target.textentry.value 
+        
     }
 
     const methods = {
@@ -28,7 +29,7 @@ async function getAll(){
         for(let i = 0; i < jsonData.length; i++){
             console.log(jsonData[i].body);
             let card = document.createElement('div');
-            card.innerHTML = `<div id="card${i}" class="card"><a href="thread.html?${jsonData[i].id}">${jsonData[i].body}</a></div>`;
+            card.innerHTML = `<div id="card${i}" class="card"><a class='entryContent' href="thread.html?${jsonData[i].id}">${jsonData[i].body}</a></div>`;
             cardbox.append(card);
         }
     }catch(err){
