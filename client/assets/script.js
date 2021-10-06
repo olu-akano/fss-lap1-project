@@ -7,16 +7,16 @@ let str = document.getElementById("gifInput").value.trim();
 let arrStr = str.split('')
 console.log(str)
 
-// popUp.addEventListener('mouseleave', (e) => {
-//     e.preventDefault()
-//     popUp.style.display = "none"
-// })
+popUp.addEventListener('mouseleave', (e) => {
+    e.preventDefault()
+    popUp.style.display = "none"
+})
 
 gifBtn.addEventListener("click", e => {
     e.preventDefault();
     popUp.style.display = "flex"
     let str = document.getElementById("gifInput").value.trim();
-    let apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=1&q=`
+    let apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=9&q=`
     apiURL = apiURL.concat(str);
     console.log(apiURL);
     fetch(apiURL)
@@ -52,12 +52,16 @@ gifBtn.addEventListener("click", e => {
 function clicked(url){
     let chosenGif = document.getElementById('gif')
     let clickedGif = document.getElementById('chosen')
-    let testing = document.getElementById('testing')
     let chosenGifUrl = document.getElementById('chosenGifUrl')
     chosenGif.addEventListener('click', (e) => {
         e.preventDefault()
         clickedGif.innerHTML = `<p>this is the img u chose</p> <img src = "${url}"></img>`
         chosenGifUrl.value = `${url}`
+    })
+    clickedGif.addEventListener("click", (e) => {
+        e.preventDefault()
+        clickedGif.innerHTML = ''
+        chosenGifUrl.value = ''
     })
 }
 
