@@ -57,7 +57,6 @@ function addComment(req,res){
     let commentElem = arrNewComment[0]
     let commentId = parseInt(req.params.cid)
     data[commentId - 1]['comments'].push(commentElem)
-    
     let newCommentString = JSON.stringify(data, null, 2)
     fs.writeFile('data.json', newCommentString, (success) => {
         console.log('all done')
