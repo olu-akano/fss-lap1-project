@@ -18,11 +18,15 @@
             <textarea  id="textentry" name="textentry" rows="4" cols="50" maxlength="50" minlength="5"></textarea>
             <br><br>
             <input id='submitButton' type="submit" value="Submit">
-            <input id='gifButtonHomepage' type="submit" value="Add GIF">
+            <form id = "gifSearch">
+                <input id = "gifInput" type = "search" placeholder="search gifs">
+                <button id = "gifButton" type ="submit">Click me!</button>
+            </form>
         </form>
     </div>
-    <div id='gifsearch'>
-        
+    <div id='gifPopup'>
+            <div class = "output"></div>
+            <div id = "chosen"></div>        
     </div>
     <div id='card--container'>
 
