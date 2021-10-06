@@ -50,5 +50,23 @@
     "siteUrl": "",
     "body": "9th post",
     "comments": []
+  },
+  {
+    "id": 9,
+    "siteUrl": "",
+    "body": "post added",
+    "comments": []
+  },
+  {
+    "id": 10,
+    "siteUrl": "https://media4.giphy.com/media/l0Exl2gzkfMptFOGA/giphy-downsized-medium.gif?cid=1807b742qsvohslz71i4w2rich5qbvnwt4d7pwebvkx3633n&rid=giphy-downsized-medium.gif&ct=g",
+    "body": "testing",
+    "comments": []
+  },
+  {
+    "id": 11,
+    "siteUrl": "",
+    "body": "one more post",
+    "comments": []
   }
 ]

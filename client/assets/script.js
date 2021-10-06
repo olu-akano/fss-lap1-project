@@ -58,7 +58,7 @@ function clicked(url){
     chosenGif.addEventListener('click', (e) => {
         e.preventDefault()
         chosenGifUrl.value = `${url}`
-        userGif.innerHTML = `<img width = "100px" height = "100px" src = "${url}">`
+        userGif.innerHTML = `<img id='thumbnail' width = "100px" height = "100px" src = "${url}">`
     })
     userGif.addEventListener("click", (e) => {
         e.preventDefault()

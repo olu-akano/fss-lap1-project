@@ -126,7 +126,7 @@ body {
     /* position: relative; */
     max-height: 50px;
     margin-top: 28px;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 #thread {
     min-height: 500px;
@@ -162,16 +162,11 @@ body {
 #thread {
     min-height: 500px;
 }
-#gifButton {
-    /* position: relative; */
-    max-height: 50px;
-    margin-top: 28px;
-}
 .entryContent {
     text-decoration: none;
     color: black;
 }
-#gifPopup {
+/* #gifPopup {
     display: none;
     position: absolute;
     z-index: 999;
@@ -179,7 +174,7 @@ body {
     width: 1000px;
     border: 1px solid #000;
     margin-left: 500px;
-}
+} */
 #chosenGifUrl{
     display:none;
 }
@@ -187,3 +182,35 @@ body {
     width: 20px;
     height:20px;
 }
+#gifPopup {
+    display: none;
+    /* display: grid; */
+    position: absolute;
+    z-index: 999;
+    background-color: white;
+    margin: 0 auto;
+    margin-left: 5%;
+    border: 1px solid #000;
+    display: grid;
+    gap: 1rem;
+    min-height: 90%;
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 1fr 1fr 1fr;  */
+    align-items: center;
+    justify-items: center;
+}
+#gifInput {
+    height: 50px;
+    margin-top: 28px;
+    margin-right: 10px
+}
+#userGif {
+    display: inline-block;
+    margin-left: 10px;
+    border: 1px solid #000;
+    min-height: 100px;
+    min-width: 100px;
+    border-radius: 5px;
+}
+
