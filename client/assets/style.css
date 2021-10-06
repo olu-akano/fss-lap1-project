@@ -130,7 +130,7 @@ body {
 #thread {
     min-height: 500px;
 }
-#gifButtonHomepage {
+#gifButton {
     /* position: relative; */
     max-height: 50px;
     margin-top: 28px;
@@ -139,7 +139,7 @@ body {
     text-decoration: none;
     color: black;
 }
-#gifsearch {
+#gifPopup {
     /* display: none; */
     position: absolute;
     z-index: 999;
