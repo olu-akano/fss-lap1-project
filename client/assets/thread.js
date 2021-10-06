@@ -19,7 +19,10 @@ commentEntry.addEventListener('submit', (e) => {
     };
     document.getElementById('commententry').value = ''
     fetch(`http://localhost:5500/comments/${id}`, methods)
-        .then(res => res.json())
+        .then(res => {
+            res.json()
+            location.reload()
+        })
 })
 
 
@@ -50,9 +53,4 @@ async function getThread(){
         console.error(err)
     }
 }
-reloadBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    location.reload()
-})
-
 getThread()
