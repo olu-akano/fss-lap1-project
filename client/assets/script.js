@@ -83,21 +83,6 @@ async function getAll(){
 }
 
 
-async function getSingleEntry(){
-    try{
-        let resp = await fetch('http://localhost:5500/')
-        let jsonData = await resp.json()
-        for(let x = 0; x < jsonData.length; x++){
-            let id = jsonData[x].id
-            console.log(jsonData[x])
-            let respId = await fetch(`http://localhost:5500/${id}`)
-            let jsonDataentry = await respId.json()
-            console.log(jsonDataentry.body)
-        }
-    }catch(err){
-        console.error(err)
-    }
-}
 function journalPost(){
     journalEntry.addEventListener('submit', (e) => {
         e.preventDefault();

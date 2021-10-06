@@ -1,75 +1,30 @@
 [
   {
     "id": 1,
-    "title": "example",
-    "body": "example body",
-    "gifUrl": "url",
+    "siteUrl": "",
+    "body": "first post",
     "comments": [
-      "example comments",
-      "1st entry second comment",
-      "new comment",
-      "new comment 242",
-      "nice example",
-      "comments",
-      "new comment 666666666666",
-      "new comment 10101010101",
-      "new comment 6534634",
-      "new comment 89808908",
-      "new comment 457762",
-      "ggggggg",
-      "comment 1234",
-      "any comment"
+      "new comment"
     ]
   },
   {
     "id": 2,
-    "body": "gggggg",
-    "comments": []
-  },
-  {
-    "id": 5,
-    "body": "example body new",
+    "siteUrl": "https://media0.giphy.com/media/l378wGtG2aQgZJT32/giphy.gif?cid=1807b742uhk9yf6njkcglp4xx4pxnl1gd53ez49zeou230lj&rid=giphy.gif&ct=g",
+    "body": "second post",
     "comments": [
       "new comment"
     ]
   },
   {
-    "id": 6,
-    "body": "new post",
-    "comments": [
-      "new comment"
-    ]
-  },
-  {
-    "id": 7,
-    "body": "i want this post to have a gif",
-    "siteUrl": "https://media3.giphy.com/media/13BwjdpxACoBPO/giphy.gif?cid=1807b742mb1g91tt0amd6yfvn427sxgfuzm0qsszvfvp4600&rid=giphy.gif&ct=g",
-    "comments": []
-  },
-  {
-    "id": 8,
-    "body": "i want this post to have a gif but dont make it 3",
-    "siteUrl": "https://media3.giphy.com/media/1wpaCOVdglMSYgjCum/giphy.gif?cid=1807b742z0tos7cac3d6tulc68tvuv4i42skuvh3i9czr8nf&rid=giphy.gif&ct=g",
-    "comments": [
-      "new comment on this pst"
-    ]
-  },
-  {
-    "id": 9,
-    "body": "new post should not have a gif",
-    "siteUrl": "https://media2.giphy.com/media/ASd0Ukj0y3qMM/giphy.gif?cid=1807b742z0tos7cac3d6tulc68tvuv4i42skuvh3i9czr8nf&rid=giphy.gif&ct=g",
-    "comments": []
-  },
-  {
-    "id": 10,
-    "body": "new post should not have a gif",
-    "siteUrl": "https://media4.giphy.com/media/28GHfhGFWpFgsQB4wR/giphy.gif?cid=1807b742m931xguoykxy31uqjpj98a25br5x4q2edc09z3e4&rid=giphy.gif&ct=g",
-    "comments": []
-  },
-  {
-    "id": 11,
+    "id": 3,
     "siteUrl": "",
-    "body": "no gif",
+    "body": "third post",
+    "comments": []
+  },
+  {
+    "id": 4,
+    "siteUrl": "https://media3.giphy.com/media/26xBzBm7GjZNss1Py/giphy.gif?cid=1807b742ryjnr3cqz957959o22812b8ox5z2l4p0gsrvur10&rid=giphy.gif&ct=g",
+    "body": "fourth post",
     "comments": []
   }
 ]
