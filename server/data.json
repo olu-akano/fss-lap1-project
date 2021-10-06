@@ -65,5 +65,32 @@
     "comments": [
       "new comment on this pst"
     ]
+  },
+  {
+    "id": 9,
+    "body": "new post should not have a gif",
+    "siteUrl": "https://media2.giphy.com/media/ASd0Ukj0y3qMM/giphy.gif?cid=1807b742z0tos7cac3d6tulc68tvuv4i42skuvh3i9czr8nf&rid=giphy.gif&ct=g",
+    "comments": []
+  },
+  {
+    "id": 10,
+    "body": "new post should not have a gif",
+    "siteUrl": "https://media4.giphy.com/media/28GHfhGFWpFgsQB4wR/giphy.gif?cid=1807b742m931xguoykxy31uqjpj98a25br5x4q2edc09z3e4&rid=giphy.gif&ct=g",
+    "comments": []
+  },
+  {
+    "id": 11,
+    "siteUrl": "",
+    "body": "without gif",
+    "comments": []
+  },
+  {
+    "id": 12,
+    "siteUrl": "https://media2.giphy.com/media/iDJQRjTCenF7A4BRyU/giphy-downsized-medium.gif?cid=1807b742ncwscyjxe3pqbfsu2njg8xltzdenazqsbe7vg4kc&rid=giphy-downsized-medium.gif&ct=g",
+    "body": "with gif",
+    "comments": [
+      "new comment",
+      "new 1122313"
+    ]
   }
 ]

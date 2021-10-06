@@ -140,7 +140,7 @@ body {
     color: black;
 }
 #gifPopup {
-    /* display: none; */
+    display: none;
     position: absolute;
     z-index: 999;
     height: 1000px;
@@ -148,4 +148,6 @@ body {
     border: 1px solid #000;
     margin-left: 500px;
 }
-
+#chosenGifUrl{
+    display:none;
+}
