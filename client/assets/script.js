@@ -16,7 +16,7 @@ popUp.addEventListener('mouseleave', (e) => {
 
 gifBtn.addEventListener("click", e => {
     e.preventDefault();
-    popUp.style.display = "flex"
+    popUp.style.display = "inline"
     let str = document.getElementById("gifInput").value.trim();
     let apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=9&q=`
     apiURL = apiURL.concat(str);
@@ -26,7 +26,6 @@ gifBtn.addEventListener("click", e => {
     .then(content => {
         console.log(content.data);
         let gifUrl = content.data;
-        // console.log(content.data[0].images.downsized.url)
         for(let i = 0; i < gifUrl.length;i++){
             let fig = document.createElement('figure');
             let img = document.createElement('img');
@@ -55,14 +54,15 @@ function clicked(url){
     let chosenGif = document.getElementById('gif')
     let clickedGif = document.getElementById('chosen')
     let chosenGifUrl = document.getElementById('chosenGifUrl')
+    let userGif = document.getElementById('userGif')
     chosenGif.addEventListener('click', (e) => {
         e.preventDefault()
-        clickedGif.innerHTML = `<p>this is the img u chose</p> <img src = "${url}"></img>`
         chosenGifUrl.value = `${url}`
+        userGif.innerHTML = `<img width = "100px" height = "100px" src = "${url}">`
     })
-    clickedGif.addEventListener("click", (e) => {
+    userGif.addEventListener("click", (e) => {
         e.preventDefault()
-        clickedGif.innerHTML = ''
+        userGif.innerHTML = ''
         chosenGifUrl.value = ''
     })
 }
@@ -83,21 +83,6 @@ async function getAll(){
 }
 
 
-async function getSingleEntry(){
-    try{
-        let resp = await fetch('http://localhost:5500/')
-        let jsonData = await resp.json()
-        for(let x = 0; x < jsonData.length; x++){
-            let id = jsonData[x].id
-            console.log(jsonData[x])
-            let respId = await fetch(`http://localhost:5500/${id}`)
-            let jsonDataentry = await respId.json()
-            console.log(jsonDataentry.body)
-        }
-    }catch(err){
-        console.error(err)
-    }
-}
 function journalPost(){
     journalEntry.addEventListener('submit', (e) => {
         e.preventDefault();
