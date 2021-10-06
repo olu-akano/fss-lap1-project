@@ -53,10 +53,11 @@ function showGif (content){
         // popUp.append(fig);
         // console.log(gif)
         popUp.append(fig)
-        let output = document.querySelector('.output')
+        let output = document.querySelector('#gifPopup')
         output.insertAdjacentElement('afterbegin', fig);
         document.querySelector('#gifInput').value ='';
         
+        output.style.visibility='visible';
         clicked(gif)
     }
 }
