@@ -14,45 +14,56 @@ popUp.addEventListener('mouseleave', (e) => {
 })
 
 
-gifBtn.addEventListener("click", e => {
+gifBtn.addEventListener("click", gifselection);
+
+function showGif (content){
+    popUp.style.display = "grid"
+    let gifUrl = content.data;
+    let i = 1;
+    for(const gif of gifUrl){
+        let fig = document.createElement('div');
+        fig.classList.add("gifchoice");
+        // let img = document.createElement('img');
+        // let fc = document.createElement('figcaption');
+        // img.src = content.data[i].images.downsized_medium.url;
+        // img.alt = content.data[i].title;
+        // img.id = 'gif'
+        // fc.textContent = content.data[i].title;
+        // fig.append(img);
+        // fig.append(fc);
+        // let gif = img.src
+        fig.innerHTML = `<figure id="gif${i}" class='gif ' ><img src='${content.data[i].images.downsized_medium.url}' 
+        alt='${content.data[i].title}' style= "width:100px"> <figcaption> ${content.data[i].title} </figcaption> </figure>`;
+        popUp.append(fig);
+        // console.log(gif)
+        // let output = document.querySelector('.output')
+        // output.insertAdjacentElement('afterbegin', fig);
+        // document.querySelector('#gifInput').value ='';
+        i++
+        clicked(gif)
+    }
+}
+
+async function gifselection (e) {
     e.preventDefault();
-    popUp.style.display = "inline"
-    let str = document.getElementById("gifInput").value.trim();
+    let str = document.getElementById("gifInput").value;
+    str.value = '';
     let apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=9&q=`
-    apiURL = apiURL.concat(str);
-    console.log(apiURL);
-    fetch(apiURL)
-    .then(res => res.json())
-    .then(content => {
-        console.log(content.data);
-        let gifUrl = content.data;
-        for(let i = 0; i < gifUrl.length;i++){
-            let fig = document.createElement('figure');
-            let img = document.createElement('img');
-            let fc = document.createElement('figcaption');
-            img.src = content.data[i].images.downsized_medium.url;
-            img.alt = content.data[i].title;
-            img.id = 'gif'
-            fc.textContent = content.data[i].title;
-            fig.append(img);
-            fig.append(fc);
-            let gif = img.src
-            console.log(gif)
-            let output = document.querySelector('.output')
-            output.insertAdjacentElement('afterbegin', fig);
-            document.querySelector('#gifInput').value ='';
-            clicked(gif)
-        }
-    })
-    .catch(err =>{
-        console.error(`Oh no.. ${err}`)
-    
-    });
-}) 
+    // apiURL = apiURL.concat(str);
+    try {
+        let data = await fetch(apiURL);
+        let dataJson = await data.json();
+        showGif(dataJson);
+    } catch (err) {console.warn(err)}
+}
+
+
+
+
 
 function clicked(url){
     let chosenGif = document.getElementById('gif')
-    let clickedGif = document.getElementById('chosen')
+    // let clickedGif = document.getElementById('chosen')
     let chosenGifUrl = document.getElementById('chosenGifUrl')
     let userGif = document.getElementById('userGif')
     chosenGif.addEventListener('click', (e) => {

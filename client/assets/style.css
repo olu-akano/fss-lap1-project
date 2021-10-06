@@ -195,8 +195,8 @@ body {
     gap: 1rem;
     min-height: 90%;
     width: 90%;
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: 1fr 1fr 1fr;  */
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-rows: repeat(3, 1fr);  */
     align-items: center;
     justify-items: center;
 }
@@ -208,6 +208,7 @@ body {
 #userGif {
     display: inline-block;
     margin-left: 10px;
+    margin-right: 10px;
     border: 1px solid #000;
     min-height: 100px;
     min-width: 100px;
