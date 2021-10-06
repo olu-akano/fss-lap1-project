@@ -15,27 +15,15 @@
       "new comment 10101010101",
       "new comment 6534634",
       "new comment 89808908",
-      "new comment 457762"
+      "new comment 457762",
+      "ggggggg",
+      "comment 1234",
+      "any comment"
     ]
   },
   {
     "id": 2,
-    "title": "example2",
-    "body": "example body2",
-    "gifUrl": "url2",
-    "comments": [
-      "example comments2",
-      "1st entry second comment 2"
-    ]
-  },
-  {
-    "id": 3,
-    "body": "cats and dogs",
-    "comments": []
-  },
-  {
-    "id": 4,
-    "body": "gif by gpihy\n",
+    "body": "gggggg",
     "comments": []
   },
   {

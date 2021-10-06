@@ -7,10 +7,12 @@ let str = document.getElementById("gifInput").value.trim();
 let arrStr = str.split('')
 console.log(str)
 
+
 popUp.addEventListener('mouseleave', (e) => {
     e.preventDefault()
     popUp.style.display = "none"
 })
+
 
 gifBtn.addEventListener("click", e => {
     e.preventDefault();
@@ -72,7 +74,7 @@ async function getAll(){
         let cardbox = document.getElementById('card--container');
         for(let i = 0; i < jsonData.length; i++){
             let card = document.createElement('div');
-            card.innerHTML = `<div id="card${i}" class="card"><a href="thread.html?${jsonData[i].id}">${jsonData[i].body}</a></div>`;
+            card.innerHTML = `<div id="card${i}" class="card"><a class='entryContent' href="thread.html?${jsonData[i].id}">${jsonData[i].body}</a></div>`;
             cardbox.append(card);
         }
     }catch(err){
