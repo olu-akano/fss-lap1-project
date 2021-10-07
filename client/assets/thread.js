@@ -44,8 +44,8 @@ async function getThread(){
             let commentBody = document.getElementById('comment-box')
             let threadComment = document.createElement('p')
             let commentDate = new Date();
-            threadComment.id = 'threadComment'
-            threadComment.innerHTML = `<p class = "commentOnPage">${jsonDataEntry.comments[i]} ${commentDate.getDate()}/${commentDate.getMonth() + 1}/${commentDate.getFullYear()}</p>`
+            threadComment.classList.add("commentOnPage");
+            threadComment.innerHTML = `${jsonDataEntry.comments[i]} ${commentDate.getDate()}/${commentDate.getMonth() + 1}/${commentDate.getFullYear()}`
             commentBody.append(threadComment)
             console.log(jsonDataEntry.comments[0])
         }
