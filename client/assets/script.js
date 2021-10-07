@@ -90,7 +90,7 @@ async function getAll(){
             let card = document.createElement('div');
             card.classList.add('card')
             card.id = `card${i}`
-            card.innerHTML = `<a class='entryContent' href="thread.html?${jsonData[i].id}">${jsonData[i].body}</a>
+            card.innerHTML = `<a class='entryContent' href="client/thread.html?${jsonData[i].id}">${jsonData[i].body}</a>
             <div class ='bottomBar'></div>`;
             cardbox.append(card);
         }
