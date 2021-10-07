@@ -5,9 +5,9 @@ let id = window.location.search.slice(1);
 console.log("this is the id " + id)
 
 commentEntry.addEventListener('submit', (e) => {
-    e.preventDefault()
-    let commentContent = e.target.commententry.value
-    if(commentContent){
+    e.preventDefault();
+    let commentContent = e.target.commententry.value;
+    if (commentContent){
         const newComment = {
             comment: commentContent
         }
@@ -25,10 +25,10 @@ commentEntry.addEventListener('submit', (e) => {
                 res.json()
                 location.reload()
             })
-    } else {
-        alert('please insert upto 5 characters')
-    }
-})
+        }else {alert('Please enter a comment of more than 5 characters')}
+    })
+
+
 
 
 async function getThread(){

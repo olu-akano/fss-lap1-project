@@ -1,20 +1,10 @@
 [
   {
     "id": 1,
-    "siteUrl": "giphy.com",
+    "siteUrl": "",
     "body": "first post",
     "comments": [
-      "new comment",
-      "2nd comment"
-    ]
-  },
-  {
-    "id": 2,
-    "siteUrl": "https://media0.giphy.com/media/l378wGtG2aQgZJT32/giphy.gif?cid=1807b742uhk9yf6njkcglp4xx4pxnl1gd53ez49zeou230lj&rid=giphy.gif&ct=g",
-    "body": "second post",
-    "comments": [
-      "new comment",
-      "Another new comment"
+      "Making a comment"
     ]
   }
 ]
