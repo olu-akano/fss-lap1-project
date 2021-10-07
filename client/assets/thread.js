@@ -26,7 +26,7 @@ commentEntry.addEventListener('submit', (e) => {
                 location.reload()
             })
     } else {
-        alert('please insert upto 5 characters')
+        alert('Please enter a comment of more than 5 characters')
     }
 })
 
