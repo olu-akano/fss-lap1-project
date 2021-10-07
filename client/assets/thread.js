@@ -20,7 +20,7 @@ commentEntry.addEventListener('submit', (e) => {
             }
         };
         document.getElementById('commententry').value = ''
-        fetch(`http://localhost:5500/comments/${id}`, methods)
+        fetch(`https://journ-itapi.herokuapp.com/comments/${id}`, methods)
             .then(res => {
                 res.json()
                 location.reload()
@@ -33,7 +33,7 @@ commentEntry.addEventListener('submit', (e) => {
 
 async function getThread(){
     try{
-        let respId = await fetch(`http://localhost:5500/${id}`)
+        let respId = await fetch(`https://journ-itapi.herokuapp.com/${id}`)
         let jsonDataEntry = await respId.json()
         let figGif = document.getElementById('seeGif')
         let thread = document.getElementById('thread')
