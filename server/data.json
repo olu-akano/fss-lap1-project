@@ -1,10 +1,11 @@
 [
   {
     "id": 1,
-    "siteUrl": "",
+    "siteUrl": "giphy.com",
     "body": "first post",
     "comments": [
-      "new comment"
+      "new comment",
+      "2nd comment"
     ]
   },
   {
@@ -12,7 +13,8 @@
     "siteUrl": "https://media0.giphy.com/media/l378wGtG2aQgZJT32/giphy.gif?cid=1807b742uhk9yf6njkcglp4xx4pxnl1gd53ez49zeou230lj&rid=giphy.gif&ct=g",
     "body": "second post",
     "comments": [
-      "new comment"
+      "new comment",
+      "third comment"
     ]
   },
   {
