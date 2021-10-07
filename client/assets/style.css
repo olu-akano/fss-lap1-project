@@ -1,22 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
 * {
     font-family: 'Lato', 'sans-serif';
+}
+html {
+    background: url('linegeo3-04-17-01.jpg');
+    background-size: cover;
 }
 body {
     width:100%;
     height:100%;
     margin:0;
-    background-color: #F0EEEE;
+    
 }
 #header {
-    min-height: 50px;
+    display: flex;
+    min-height: 85px;
     min-width: 100%;
     border: 1px solid #000;
     margin: 0;
     color: white;
     background-color: #545151;
-    
+}
+#title {
+    margin-left: 40vw;
+    /* display: inline-block; */
 }
 #input--container {
     /* border: 1px solid #000; */
@@ -33,7 +40,6 @@ body {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    
 }
 #card--container {
     margin: 0 auto;
@@ -56,16 +62,16 @@ body {
     text-align: center;
     font-size: 1.5em;
     border-radius: 10px;
-    box-shadow: 5px 5px grey;  
+    box-shadow: 5px 5px 5px grey;  
 }
-#header > a {
+#header  a {
     text-decoration: none;
     color: white;
     display: inline-block;
-    margin-left: 15px;
-    margin-top: 10px;
+    margin-left: 20%;
+    margin-top: 25%;
     font-size: 30px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 #textentry {
     width: 500px;
@@ -73,16 +79,58 @@ body {
     margin-right: 10px;
     resize: none;
     border-radius: 5px;
-    box-shadow: 5px 5px;
+    box-shadow: 5px 5px 5px;
+}
+
+#charcount {
+    height: auto;
+    /* display: table-cell; */
+    vertical-align: text-bottom;
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    
+}
+textarea {
+    font-family: 'Lato', 'sans-serif';
 }
 #thread {
-    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 3px solid #000;
     text-align: center;
+    min-height: 60%;
+    border-radius: 10px;
+    margin: 10px;
+    justify-content: center;
+    background-color: white;
+}
+#threadGif {
+    max-height: 200px;
+    max-width: 100px;
+    align-self: center;
+    margin-bottom: 10px;
+}
+#threadBody {
+    /* max-height: 100px; */
+}
+#gif--container {
+    border: 3px solid blue;
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    margin: 10px;
 }
 #comment-box {
     position: relative;
     height: 1000px;
-    border: 1px solid #000;
+    border: 3px solid #000;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
 }
 .commentOnPage {
     margin: 10px auto;
@@ -90,6 +138,7 @@ body {
     min-height: 10px;
     width: 90%;
     padding: 10px;
+    border-radius: 10px;
 }
 #commententry {
     width: 600px;
@@ -104,25 +153,30 @@ body {
 #commentOnPost {
     display: flex;
     justify-content: center;
-    border: 1px solid #000;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+#commentbutton {
+    max-height: 50px;
+    margin-top: 28px;
+    margin-right: 10px;
+}
+.wrapper {
+    min-height: 100%;
     
 }
-#footer {
+footer {
     /* border: 1px solid #000; */
     color: white;
-    
     bottom: 0;
     background-color: #545151;
     min-height: 35px;
     min-width: 100%;
     margin: 10px 0px 0px 0px;
-    
-
 }
-#footer > h2 {
+    
+footer > h2 {
     margin-left: 20px;
 }
 #submitButton {
@@ -130,9 +184,6 @@ body {
     max-height: 50px;
     margin-top: 28px;
     margin-left: 10px;
-}
-#thread {
-    min-height: 500px;
 }
 #gifButton {
     /* position: relative; */
@@ -143,7 +194,6 @@ body {
     text-decoration: none;
     color: black;
 }
-
 #footer > h2 {
     margin-left: 20px;
 }
@@ -153,23 +203,19 @@ body {
     margin-top: 28px;
     margin-right: 10px;
 }
-#thread {
-    min-height: 500px;
-}
 .entryContent {
     text-decoration: none;
     color: black;
 }
-
 #chosenGifUrl{
     display:none;
 }
 #gif {
     width: 100%;
     height: 100%;
+    border-radius: 5px;
 }
 #gifPopup {
-    
     visibility: hidden;
     position: absolute;
     z-index: 999;
@@ -199,14 +245,13 @@ body {
     min-height: 100px;
     min-width: 100px;
     border-radius: 5px;
-    
+    background-color: white;
 }
-
 p {
     border-top: 5px solid red;
 }
 div {
-    border-top: 5px solid red;
+    /* border-top: 5px solid red; */
 }
 .gif {
     /* border: 1px solid #000;
@@ -216,7 +261,6 @@ div {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center; */
-    border: 1px solid #000;
     background-color: #F7F7F7;
     min-height: 0%;
     min-width: 0%;
@@ -225,5 +269,43 @@ div {
     border-radius: 5px;
 }
 .gifImg {
+}
+.bottomBar {
+    /* display: none; */
+    min-height: 20%;
+    width: 100%;
+    margin-top: 72%;
+    /* border: 1px solid #000; */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: red;
+    color: #FFF;
+}
+/* .bottomBar:hover {
+    min-height: 20%;
+    width: 100%;
+    margin-top: 71%;
+    border: 1px solid #000;
+    border-radius: 10px;
+} */
+.card .bottomBar {
+    visibility: hidden;
+}
+.card:hover .bottomBar {
+    visibility: visible;
+}
+.card:hover {
+    animation: shake-animation 4.72s ease infinite;
+    transform-origin: 50% 50%;
+}
 
+@keyframes shake-animation {
+     0% { transform:translate(0,0) }
+    1.78571% { transform:translate(5px,0) }
+    3.57143% { transform:translate(0,0) }
+    5.35714% { transform:translate(5px,0) }
+    7.14286% { transform:translate(0,0) }
+    8.92857% { transform:translate(5px,0) }
+    10.71429% { transform:translate(0,0) }
+    100% { transform:translate(0,0) }
 }
