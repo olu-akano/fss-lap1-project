@@ -83,7 +83,7 @@ function clicked(url){
 
 async function getAll(){
     try{
-        let resp = await fetch('http://localhost:5500/')
+        let resp = await fetch('https://journ-itapi.herokuapp.com/')
         let jsonData = await resp.json()
         let cardbox = document.getElementById('card--container');
         for(let i = 0; i < jsonData.length; i++){
@@ -118,7 +118,7 @@ function journalPost(){
                 }
             };
             
-            fetch('http://localhost:5500/', methods)
+            fetch('https://journ-itapi.herokuapp.com/', methods)
             .then(res => {
                 res.json()
                 document.querySelector('#chosenGifUrl').value ='';

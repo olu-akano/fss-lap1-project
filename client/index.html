@@ -6,35 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <script defer src="./assets/script.js"></script>
+    <script defer type="text/javascript">
+        function countChars(textentry,displayto) {
+          let len = document.getElementById(textentry).value.length;
+          document.getElementById(displayto).innerHTML = `${len}/300`;
+        }
+    </script>
     <title>App</title>
 </head>
 <body>
-    <div id='header'>
-        <div id='homeBtn'><a href="index.html">Home</a> </div>
-        <div id='title'><h1>Journ-It</h1></div>
-    </div>
-    <div id='input--container'>
-        <form  id='journalentry'>
-            <textarea  id="textentry" name="textentry" rows="4" cols="50" maxlength="300" minlength="10"></textarea>
-            <br><br>
-            <form id = "gifSearch">
-                <div id = "userGif"></div>
-                <input id = "gifInput" type = "search" placeholder="search...">
-                <button id = "gifButton" type ="submit">Search GIFs</button>
-                <input type="text" id = "chosenGifUrl">
-                <input id='submitButton' type="submit" value="Submit">
+    <div class="wrapper">
+        <div id='header'>
+            <div id='homeBtn'><a href="index.html">Home</a> </div>
+            <div id='title'><h1>Journ-It</h1></div>
+        </div>
+        <div id='input--container'>
+            <form  id='journalentry'>
+                <textarea  id="textentry" name="textentry" rows="4" cols="50" maxlength="300" minlength="10" 
+                onkeyup="countChars('textentry','charcount');" 
+                onkeydown="countChars('textentry','charcount');" onmouseout="countChars('textentry','charcount');"></textarea>
+                <span id="charcount">0/300</span>
+                <br><br>
+                <form id = "gifSearch">
+                    <div id = "userGif"></div>
+                    <input id = "gifInput" type = "search" placeholder="search...">
+                    <button id = "gifButton" type ="submit">Search GIFs</button>
+                    <input type="text" id = "chosenGifUrl">
+                    <input id='submitButton' type="submit" value="Submit">
+                </form>
             </form>
-        </form>
+        </div>
+        <div id='gifPopup'>
+                
+        </div>
+        <div id='card--container'>
+        </div>
+
     </div>
-    <div id='gifPopup'>
-            <!-- <div class = "output"></div> -->
-            <!-- <div id = "chosen"></div> -->
-    </div>
-    <div id='card--container'>
-    </div>
-    <!-- <div id = 'comments'></div> -->
-    <div id='footer'>
-        <h2>Footer :joy: </h2>
-    </div>
+    
+    <!-- <footer>
+        <h2>Footer 😂 </h2>
+    </footer> -->
 </body>
 </html>
