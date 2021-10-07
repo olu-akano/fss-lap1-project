@@ -126,7 +126,7 @@ function journalPost(){
                 location.reload()
             })
         } else {
-            alert('please insert upto 10 characters')
+            alert('Please enter a post of more than 10 characters')
         }
 
     })
