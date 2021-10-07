@@ -150,5 +150,17 @@
     "siteUrl": "https://media1.giphy.com/media/11V6rs3BsLzVcs/giphy.gif?cid=1807b742r4cbpj607w7b9xr7s1v4dxwh005m1qaearvxxh7v&rid=giphy.gif&ct=g",
     "body": "adada",
     "comments": []
+  },
+  {
+    "id": 25,
+    "siteUrl": "",
+    "body": "without gif",
+    "comments": []
+  },
+  {
+    "id": 26,
+    "siteUrl": "https://media2.giphy.com/media/8OTxSsEKzMs2A/giphy.gif?cid=1807b7420ft088giqtpr77m441kocvbgl6b63e7w1ps2pxai&rid=giphy.gif&ct=g",
+    "body": "with gif",
+    "comments": []
   }
 ]

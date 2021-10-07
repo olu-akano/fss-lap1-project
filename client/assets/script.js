@@ -90,7 +90,8 @@ async function getAll(){
             let card = document.createElement('div');
             card.classList.add('card')
             card.id = `card${i}`
-            card.innerHTML = `<a class='entryContent' href="thread.html?${jsonData[i].id}">${jsonData[i].body}</a>`;
+            card.innerHTML = `<a class='entryContent' href="thread.html?${jsonData[i].id}">${jsonData[i].body}</a>
+            <div class ='bottomBar'></div>`;
             cardbox.append(card);
         }
     }catch(err){
@@ -102,27 +103,32 @@ async function getAll(){
 function journalPost(){
     journalEntry.addEventListener('submit', (e) => {
         e.preventDefault();
-        console
-        const entry = {
-            siteUrl: e.target.chosenGifUrl.value,
-            body: e.target.textentry.value
-        }
-        console.log(entry)
-        const methods = {
-            method: 'POST',
-            body: JSON.stringify(entry),
-            headers: {
-                "Content-Type": "application/json"
+        let entryContent = e.target.textentry.value
+        if(entryContent){
+            const entry = {
+                siteUrl: e.target.chosenGifUrl.value,
+                body: entryContent
             }
-        };
-        
-        fetch('http://localhost:5500/', methods)
-        .then(res => {
-            res.json()
-            document.querySelector('#chosenGifUrl').value ='';
-            document.querySelector('#textentry').value ='';
-            location.reload()
-        })
+            console.log(entry)
+            const methods = {
+                method: 'POST',
+                body: JSON.stringify(entry),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            };
+            
+            fetch('http://localhost:5500/', methods)
+            .then(res => {
+                res.json()
+                document.querySelector('#chosenGifUrl').value ='';
+                document.querySelector('#textentry').value ='';
+                location.reload()
+            })
+        } else {
+            alert('please insert upto 10 characters')
+        }
+
     })
 }
 getAll()

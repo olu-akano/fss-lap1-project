@@ -1,4 +1,4 @@
-const {app} = require("../server/app");
+const app = require("../server/app");
 const port = 5500;
 app.listen(port,(err) => {
     if (err) {
