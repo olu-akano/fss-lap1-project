@@ -12,7 +12,8 @@
     "siteUrl": "https://media0.giphy.com/media/l378wGtG2aQgZJT32/giphy.gif?cid=1807b742uhk9yf6njkcglp4xx4pxnl1gd53ez49zeou230lj&rid=giphy.gif&ct=g",
     "body": "second post",
     "comments": [
-      "new comment"
+      "new comment",
+      "Another new comment"
     ]
   },
   {
@@ -49,6 +50,80 @@
     "id": 8,
     "siteUrl": "",
     "body": "9th post",
+    "comments": []
+  },
+  {
+    "id": 9,
+    "siteUrl": "",
+    "body": "post added",
+    "comments": []
+  },
+  {
+    "id": 10,
+    "siteUrl": "https://media4.giphy.com/media/l0Exl2gzkfMptFOGA/giphy-downsized-medium.gif?cid=1807b742qsvohslz71i4w2rich5qbvnwt4d7pwebvkx3633n&rid=giphy-downsized-medium.gif&ct=g",
+    "body": "testing",
+    "comments": []
+  },
+  {
+    "id": 11,
+    "siteUrl": "",
+    "body": "one more post",
+    "comments": []
+  },
+  {
+    "id": 12,
+    "siteUrl": "",
+    "body": "addrererrr",
+    "comments": []
+  },
+  {
+    "id": 13,
+    "siteUrl": "",
+    "body": "evie is a massive homo",
+    "comments": [
+      "get a load of this bitch"
+    ]
+  },
+  {
+    "id": 14,
+    "siteUrl": "",
+    "body": "postggggg",
+    "comments": []
+  },
+  {
+    "id": 15,
+    "siteUrl": "https://media1.giphy.com/media/JkudopvgWdFss/giphy-downsized-medium.gif?cid=1807b742xeps5atisljsl434otietged39iib730kbgayhl7&rid=giphy-downsized-medium.gif&ct=g",
+    "body": "check it",
+    "comments": []
+  },
+  {
+    "id": 16,
+    "siteUrl": "https://media3.giphy.com/media/1wpaCOVdglMSYgjCum/giphy.gif?cid=1807b742g2v4yiugwd6sm1rqkb1c384m15iod3lqab31k61v&rid=giphy.gif&ct=g",
+    "body": "broooooooooo",
+    "comments": []
+  },
+  {
+    "id": 17,
+    "siteUrl": "https://media1.giphy.com/media/MVDPX3gaKFPuo/giphy.gif?cid=1807b7424q39fhlra8f2jbevurpdymr7fluzwxvvi19vqfj8&rid=giphy.gif&ct=g",
+    "body": "is this really working",
+    "comments": []
+  },
+  {
+    "id": 18,
+    "siteUrl": "",
+    "body": "new post",
+    "comments": []
+  },
+  {
+    "id": 19,
+    "siteUrl": "",
+    "body": "searchbox is fine",
+    "comments": []
+  },
+  {
+    "id": 20,
+    "siteUrl": "https://media3.giphy.com/media/l0Exl2gzkfMptFOGA/giphy-downsized.gif?cid=1807b742iv2eprn6lmygq613ntj4pyinxewd8kaq3i0rt4sf&rid=giphy-downsized.gif&ct=g",
+    "body": "with a gif",
     "comments": []
   }
 ]
