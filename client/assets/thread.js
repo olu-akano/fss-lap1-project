@@ -5,9 +5,9 @@ let id = window.location.search.slice(1);
 console.log("this is the id " + id)
 
 commentEntry.addEventListener('submit', (e) => {
-    e.preventDefault()
-    let commentContent = e.target.commententry.value
-    if(commentContent){
+    e.preventDefault();
+    let commentContent = e.target.commententry.value;
+    if (commentContent){
         const newComment = {
             comment: commentContent
         }
@@ -20,20 +20,20 @@ commentEntry.addEventListener('submit', (e) => {
             }
         };
         document.getElementById('commententry').value = ''
-        fetch(`http://localhost:5500/comments/${id}`, methods)
+        fetch(`https://journ-itapi.herokuapp.com/comments/${id}`, methods)
             .then(res => {
                 res.json()
                 location.reload()
             })
-    } else {
-        alert('please insert upto 5 characters')
-    }
-})
+        }else {alert('Please enter a comment of more than 5 characters')}
+    })
+
+
 
 
 async function getThread(){
     try{
-        let respId = await fetch(`http://localhost:5500/${id}`)
+        let respId = await fetch(`https://journ-itapi.herokuapp.com/${id}`)
         let jsonDataEntry = await respId.json()
         let figGif = document.getElementById('seeGif')
         let thread = document.getElementById('thread')

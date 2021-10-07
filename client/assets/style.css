@@ -2,11 +2,15 @@
 * {
     font-family: 'Lato', 'sans-serif';
 }
+html {
+    background: url('linegeo3-04-17-01.jpg');
+    background-size: cover;
+}
 body {
     width:100%;
     height:100%;
     margin:0;
-    background-color: #F0EEEE;
+    
 }
 #header {
     display: flex;
@@ -77,6 +81,18 @@ body {
     border-radius: 5px;
     box-shadow: 5px 5px 5px;
 }
+
+#charcount {
+    height: auto;
+    /* display: table-cell; */
+    vertical-align: text-bottom;
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    
+}
 textarea {
     font-family: 'Lato', 'sans-serif';
 }
@@ -86,13 +102,14 @@ textarea {
     position: relative;
     border: 3px solid #000;
     text-align: center;
-    min-height: 50%;
+    min-height: 60%;
     border-radius: 10px;
     margin: 10px;
     justify-content: center;
+    background-color: white;
 }
 #threadGif {
-    max-height: 100px;
+    max-height: 200px;
     max-width: 100px;
     align-self: center;
     margin-bottom: 10px;
@@ -113,6 +130,7 @@ textarea {
     border: 3px solid #000;
     margin: 10px;
     border-radius: 10px;
+    background-color: white;
 }
 .commentOnPage {
     margin: 10px auto;
@@ -139,7 +157,16 @@ textarea {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-#footer {
+#commentbutton {
+    max-height: 50px;
+    margin-top: 28px;
+    margin-right: 10px;
+}
+.wrapper {
+    min-height: 100%;
+    
+}
+footer {
     /* border: 1px solid #000; */
     color: white;
     bottom: 0;
@@ -148,7 +175,8 @@ textarea {
     min-width: 100%;
     margin: 10px 0px 0px 0px;
 }
-#footer > h2 {
+    
+footer > h2 {
     margin-left: 20px;
 }
 #submitButton {
@@ -217,6 +245,7 @@ textarea {
     min-height: 100px;
     min-width: 100px;
     border-radius: 5px;
+    background-color: white;
 }
 p {
     border-top: 5px solid red;
@@ -264,4 +293,19 @@ div {
 }
 .card:hover .bottomBar {
     visibility: visible;
+}
+.card:hover {
+    animation: shake-animation 4.72s ease infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes shake-animation {
+     0% { transform:translate(0,0) }
+    1.78571% { transform:translate(5px,0) }
+    3.57143% { transform:translate(0,0) }
+    5.35714% { transform:translate(5px,0) }
+    7.14286% { transform:translate(0,0) }
+    8.92857% { transform:translate(5px,0) }
+    10.71429% { transform:translate(0,0) }
+    100% { transform:translate(0,0) }
 }
