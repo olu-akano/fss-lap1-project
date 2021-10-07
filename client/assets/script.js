@@ -22,7 +22,7 @@ async function gifselection (e) {
     e.preventDefault();
     let str = document.getElementById("gifInput").value.trim();
     str.value = '';
-    let apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=9&q=`
+    let apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=25&q=`
     apiURL = apiURL.concat(str);
     try {
         let data = await fetch(apiURL);
@@ -41,12 +41,12 @@ function showGif (content){
         fig.classList.add("gif");
         let img = document.createElement('img');
         let fc = document.createElement('figcaption');
-        img.src = content.data[i].images.downsized_medium.url;
+        img.src = content.data[i].images.downsized.url;
         img.alt = content.data[i].title;
         img.id = 'gif'
         fc.textContent = content.data[i].title;
         fig.append(img);
-        fig.append(fc);
+        // fig.append(fc);
         let gif = img.src
         // fig.innerHTML = `<figure id="gif${i}" class='gif ' ><img src='${content.data[i].images.downsized_medium.url}' 
         // alt='${content.data[i].title}' style= "width:100px"> <figcaption> ${content.data[i].title} </figcaption> </figure>`;
