@@ -1,5 +1,5 @@
-const {app, port} = require("../server/app");
-
+const {app} = require("../server/app");
+const port = 5500;
 app.listen(port,(err) => {
     if (err) {
         console.log("there was a problem", err);

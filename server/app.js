@@ -3,7 +3,6 @@ const fs = require('fs')
 const app = express();
 const cors = require('cors');
 app.use(express.json())
-const port = 5500;
 app.use(cors());
 const data = require('./data.json')
 comment1 = 'hello'
@@ -65,4 +64,4 @@ function addComment(req,res){
 
 }
 
-module.exports = {app, port};
+module.exports = app;
