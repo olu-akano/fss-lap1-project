@@ -22,6 +22,7 @@
     "siteUrl": "",
     "body": "third post",
     "comments": []
+<<<<<<< HEAD
   },
   {
     "id": 4,
@@ -52,5 +53,7 @@
     "siteUrl": "",
     "body": "9th post",
     "comments": []
+=======
+>>>>>>> main
   }
 ]
