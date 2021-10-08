@@ -1,9 +1,9 @@
 {
   "scripts": {
     "start": "node index.js",
-    "test": "jest --silent --watchAll",
+    "test": "jest --silent --watchAll --coverage",
     "coverage": "jest --coverage --silent",
-    "start-dev": "start ../client/index.html & node index.js",
+    "start-dev": "open ../client/index.html & node index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [],
