@@ -84,7 +84,16 @@ async function getAll(){
             card.classList.add('card')
             card.id = `card${i}`
             card.innerHTML = `<a class='entryContent' href="client/thread.html?${jsonData[i].id}">${jsonData[i].body}</a>
-            <div class ='bottomBar'></div>`;
+            <div class='bottomBar'>
+            <div id='reaction--container'>
+                <button id = "laugh" type = "radio" name = "input">😂</button>
+                <button id = "laughCounter">0</button>
+                <button id = "sad" type ="radio" name = "input">&#128532</button>
+                <button id = "sadCounter">0</button>
+                <button id = "cool" type ="radio" name = "input">&#128526</button>
+                <button id = "coolCounter">0</button>
+            </div>
+        </div>`;
             cardbox.append(card);
         }
     }catch(err){
@@ -126,3 +135,5 @@ function journalPost(){
 }
 getAll()
 journalPost()
+
+module.exports = {getAll, journalPost}
