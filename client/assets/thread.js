@@ -6,46 +6,52 @@ console.log("this is the id " + id)
 
 commentEntry.addEventListener('submit', (e) => {
     e.preventDefault()
-    const newComment = {
-        comment: e.target.commententry.value
-    }
-
-    const methods = {
-        method: 'POST',
-        body: JSON.stringify(newComment),
-        headers: {
-            "Content-Type": "application/json"
+    let commentContent = e.target.commententry.value
+    if(commentContent){
+        const newComment = {
+            comment: commentContent
         }
-    };
-    document.getElementById('commententry').value = ''
-    fetch(`http://localhost:5500/comments/${id}`, methods)
-        .then(res => {
-            res.json()
-            location.reload()
-        })
+    
+        const methods = {
+            method: 'POST',
+            body: JSON.stringify(newComment),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        };
+        document.getElementById('commententry').value = ''
+        fetch(`https://journ-itapi.herokuapp.com/comments/${id}`, methods)
+            .then(res => {
+                res.json()
+                location.reload()
+            })
+    } else {
+        alert('Please enter a comment of more than 5 characters')
+    }
 })
 
 
 async function getThread(){
     try{
-        let respId = await fetch(`http://localhost:5500/${id}`)
+        let respId = await fetch(`https://journ-itapi.herokuapp.com/${id}`)
         let jsonDataEntry = await respId.json()
         let figGif = document.getElementById('seeGif')
         let thread = document.getElementById('thread')
         let threadBody = document.createElement('h2')
         let threadGif = document.createElement('img')
         threadBody.id = 'threadBody'
+        threadGif.id = 'threadGif'
         threadGif.src = jsonDataEntry.siteUrl
         threadBody.innerHTML = `${jsonDataEntry.body}`
         thread.append(threadBody)
-        figGif.append(threadGif)
+        thread.append(threadGif)
         let commentArr = jsonDataEntry.comments
         for(let i = 0; i < commentArr.length; i++){
             let commentBody = document.getElementById('comment-box')
             let threadComment = document.createElement('p')
             let commentDate = new Date();
-            threadComment.id = 'threadComment'
-            threadComment.innerHTML = `<p class = "commentOnPage">${jsonDataEntry.comments[i]} ${commentDate.getDate()}/${commentDate.getMonth() + 1}/${commentDate.getFullYear()}</p>`
+            threadComment.classList.add("commentOnPage");
+            threadComment.innerHTML = `${jsonDataEntry.comments[i]} <p> ${commentDate.getDate()}/${commentDate.getMonth() + 1}/${commentDate.getFullYear()}</p>`
             commentBody.append(threadComment)
             console.log(jsonDataEntry.comments[0])
         }

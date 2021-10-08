@@ -4,32 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../journal.png" type="image/x-icon">
     <script defer src="./assets/thread.js"></script>
+    <script defer src="./emoji/emoji.js"></script>
+    <script defer type="text/javascript">
+        function countChars(commententry,displayto) {
+          let len = document.getElementById(commententry).value.length;
+          document.getElementById(displayto).innerHTML = `${len}/150`;
+        }
+    </script>
     <link rel="stylesheet" href="assets/style.css">
-    <title>thread</title>
+    <title>Journ-it Thread</title>
 </head>
 <body>
-    <div id='header'>
-        <a href="index.html">Home</a>
-    </div>
-    
-    <div id="thread">
-    </div>
-    <figure id = "seeGif">
-
-    </figure>
-    <div>
-        <form  id='commentOnPost'>
-            
-            <textarea  id="commententry" name="textentry" rows="4" cols="50" maxlength="50"></textarea>
-            <br><br>
-            <input id='commentbutton' type="submit" value="Comment">
-        </form>
-        <div id='comment-box'>
+    <div class="wrapper">
+        <div id='header'>
+            <div id='homeBtn'><a href="../index.html">Home</a> </div>
+            <div id='title'><h1>Journ-It</h1></div>
         </div>
-    </div>
-    <div id='footer'>
-        <h2>Footer</h2>
+        
+        <div id="thread">
+        </div>
+
+        <div id='reactions'>
+            <button id = "laugh" type = "radio" name = "input">😂</button>
+            <button id = "laughCounter"></button>
+            <button id = "sad" type ="radio" name = "input">&#128532</button>
+            <button id = "sadCounter"></button>
+            <button id = "cool" type ="radio" name = "input">&#128526</button>
+            <button id = "coolCounter"></button>
+        </div>
+
+        <div>
+            <form  id='commentOnPost'>
+                <textarea  id="commententry" name="textentry" rows="4" cols="50" maxlength="150" minlength="5" onkeyup="countChars('commententry','charcount');" 
+                onkeydown="countChars('commententry','charcount');" onmouseout="countChars('commententry','charcount');"></textarea>
+                <span id="charcount">0/150</span>
+                <br><br>
+                <input id='commentbutton' type="submit" value="Comment">
+            </form>
+            <div id='comment-box'>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
