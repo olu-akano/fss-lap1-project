@@ -20,11 +20,19 @@
         <div id='header'>
             <div id='homeBtn'><a href="../index.html">Home</a> </div>
         </div>
+        
         <div id="thread">
         </div>
-        <!-- <div id='gif--container'>
-            <figure id = "seeGif"></figure>
-        </div> -->
+
+        <div id='reactions'>
+            <button id = "laugh" type = "radio" name = "input">😂</button>
+            <button id = "laughCounter"></button>
+            <button id = "sad" type ="radio" name = "input">&#128532</button>
+            <button id = "sadCounter"></button>
+            <button id = "cool" type ="radio" name = "input">&#128526</button>
+            <button id = "coolCounter"></button>
+        </div>
+
         <div>
             <form  id='commentOnPost'>
                 <textarea  id="commententry" name="textentry" rows="4" cols="50" maxlength="150" minlength="5" onkeyup="countChars('commententry','charcount');" 
@@ -38,8 +46,5 @@
         </div>
 
     </div>
-    <!-- <footer>
-        <h2>Footer 😂 </h2>
-    </footer> -->
 </body>
 </html>
