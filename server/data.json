@@ -1,7 +1,6 @@
 [
   {
     "id": 1,
-<<<<<<< HEAD
     "siteUrl": "giphy.com",
     "body": "first post",
     "comments": [
@@ -23,12 +22,5 @@
     "siteUrl": "",
     "body": "third post",
     "comments": []
-=======
-    "siteUrl": "",
-    "body": "first post",
-    "comments": [
-      "Making a comment"
-    ]
->>>>>>> b6f712123a9c5a244dda4b295f984c70ebca03f3
   }
 ]
