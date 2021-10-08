@@ -172,6 +172,7 @@ textarea {
     padding: 10px;
     border-radius: 10px;
     background-color: #FFFDD0;
+    font-size: 1.1em;
 }
 #commententry {
     width: 600px;
