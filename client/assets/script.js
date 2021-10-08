@@ -27,7 +27,6 @@ async function gifselection (e) {
     try {
         let data = await fetch(apiURL);
         let dataJson = await data.json();
-        console.log(dataJson);
         showGif(dataJson);
     } catch (err) {console.warn(err)}
 }
@@ -46,12 +45,7 @@ function showGif (content){
         img.id = 'gif'
         fc.textContent = content.data[i].title;
         fig.append(img);
-        // fig.append(fc);
         let gif = img.src
-        // fig.innerHTML = `<figure id="gif${i}" class='gif ' ><img src='${content.data[i].images.downsized_medium.url}' 
-        // alt='${content.data[i].title}' style= "width:100px"> <figcaption> ${content.data[i].title} </figcaption> </figure>`;
-        // popUp.append(fig);
-        // console.log(gif)
         popUp.append(fig)
         let output = document.querySelector('#gifPopup')
         output.insertAdjacentElement('afterbegin', fig);
@@ -66,7 +60,6 @@ function showGif (content){
 
 function clicked(url){
     let chosenGif = document.getElementById('gif')
-    // let clickedGif = document.getElementById('chosen')
     let chosenGifUrl = document.getElementById('chosenGifUrl')
     let userGif = document.getElementById('userGif')
     chosenGif.addEventListener('click', (e) => {
