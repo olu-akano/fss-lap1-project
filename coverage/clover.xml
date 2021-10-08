@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1633693386868" clover="3.2.0">
-  <project timestamp="1633693386868" name="All files">
+<coverage generated="1633693433306" clover="3.2.0">
+  <project timestamp="1633693433306" name="All files">
     <metrics statements="45" coveredstatements="36" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="8" elements="55" coveredelements="44" complexity="0" loc="45" ncloc="45" packages="1" files="1" classes="1"/>
     <file name="app.js" path="C:\Users\Zain Uppal\Desktop\work\fss-lap1-project\server\app.js">
       <metrics statements="45" coveredstatements="36" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="8"/>
@@ -26,9 +26,9 @@
       <line num="28" count="1" type="stmt"/>
       <line num="32" count="3" type="stmt"/>
       <line num="33" count="3" type="stmt"/>
-      <line num="34" count="39" type="stmt"/>
-      <line num="35" count="39" type="stmt"/>
-      <line num="36" count="39" type="stmt"/>
+      <line num="34" count="42" type="stmt"/>
+      <line num="35" count="42" type="stmt"/>
+      <line num="36" count="42" type="stmt"/>
       <line num="38" count="3" type="stmt"/>
       <line num="41" count="1" type="stmt"/>
       <line num="42" count="1" type="stmt"/>

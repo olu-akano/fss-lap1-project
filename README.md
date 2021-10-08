@@ -27,6 +27,3 @@ The team really had an excellent workflow, every member took responsibility from
 One of our biggest challenges was debugging the emoji features to stop the reaction count from restarting after refreshing. This was left as a future feature.
 # Licence
 •	[MIT Licence](https://opensource.org/licenses/mit-license.php)
-
-
-

@@ -27,7 +27,6 @@ async function gifselection (e) {
     try {
         let data = await fetch(apiURL);
         let dataJson = await data.json();
-        console.log(dataJson);
         showGif(dataJson);
     } catch (err) {console.warn(err)}
 }
@@ -46,12 +45,7 @@ function showGif (content){
         img.id = 'gif'
         fc.textContent = content.data[i].title;
         fig.append(img);
-        // fig.append(fc);
         let gif = img.src
-        // fig.innerHTML = `<figure id="gif${i}" class='gif ' ><img src='${content.data[i].images.downsized_medium.url}' 
-        // alt='${content.data[i].title}' style= "width:100px"> <figcaption> ${content.data[i].title} </figcaption> </figure>`;
-        // popUp.append(fig);
-        // console.log(gif)
         popUp.append(fig)
         let output = document.querySelector('#gifPopup')
         output.insertAdjacentElement('afterbegin', fig);
@@ -66,7 +60,6 @@ function showGif (content){
 
 function clicked(url){
     let chosenGif = document.getElementById('gif')
-    // let clickedGif = document.getElementById('chosen')
     let chosenGifUrl = document.getElementById('chosenGifUrl')
     let userGif = document.getElementById('userGif')
     chosenGif.addEventListener('click', (e) => {
@@ -90,9 +83,18 @@ async function getAll(){
             let card = document.createElement('div');
             card.classList.add('card')
             card.id = `card${i}`
-            card.innerHTML = `<a class='entryContent' href="thread.html?${jsonData[i].id}">${jsonData[i].body}</a>
-            <div class='bottomBar'>BRUH WTF</div>`;
 
+            card.innerHTML = `<a class='entryContent' href="client/thread.html?${jsonData[i].id}">${jsonData[i].body}</a>
+            <div class='bottomBar'>
+            <div id='reaction--container'>
+                <button id = "laugh" type = "radio" name = "input">😂</button>
+                <button id = "laughCounter">0</button>
+                <button id = "sad" type ="radio" name = "input">&#128532</button>
+                <button id = "sadCounter">0</button>
+                <button id = "cool" type ="radio" name = "input">&#128526</button>
+                <button id = "coolCounter">0</button>
+            </div>
+        </div>`;
             cardbox.append(card);
         }
     }catch(err){
@@ -134,3 +136,5 @@ function journalPost(){
 
 getAll()
 journalPost()
+
+module.exports = {getAll, journalPost}

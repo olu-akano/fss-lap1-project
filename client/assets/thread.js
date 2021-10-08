@@ -25,8 +25,12 @@ commentEntry.addEventListener('submit', (e) => {
                 res.json()
                 location.reload()
             })
-        }else {alert('Please enter a comment of more than 5 characters')}
-    })
+
+    } else {
+        alert('Please enter a comment of more than 5 characters')
+    }
+})
+
 
 
 
@@ -37,7 +41,7 @@ async function getThread(){
         let jsonDataEntry = await respId.json()
         let figGif = document.getElementById('seeGif')
         let thread = document.getElementById('thread')
-        let threadBody = document.createElement('h3')
+        let threadBody = document.createElement('h2')
         let threadGif = document.createElement('img')
         threadBody.id = 'threadBody'
         threadGif.id = 'threadGif'
@@ -51,7 +55,7 @@ async function getThread(){
             let threadComment = document.createElement('p')
             let commentDate = new Date();
             threadComment.classList.add("commentOnPage");
-            threadComment.innerHTML = `${jsonDataEntry.comments[i]} ${commentDate.getDate()}/${commentDate.getMonth() + 1}/${commentDate.getFullYear()}`
+            threadComment.innerHTML = `${jsonDataEntry.comments[i]} <p> ${commentDate.getDate()}/${commentDate.getMonth() + 1}/${commentDate.getFullYear()}</p>`
             commentBody.append(threadComment)
             console.log(jsonDataEntry.comments[0])
         }

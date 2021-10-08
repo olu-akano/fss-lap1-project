@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
-    <script defer src="./assets/script.js"></script>
+    <link rel="stylesheet" href="./client/assets/style.css">
+    <link rel="shortcut icon" href="journal.png" type="image/x-icon">
+    <script defer src="./client/emoji/emoji.js"></script>
+    <script defer src="./client/assets/script.js"></script>
     <script defer type="text/javascript">
         function countChars(textentry,displayto) {
           let len = document.getElementById(textentry).value.length;
           document.getElementById(displayto).innerHTML = `${len}/300`;
         }
     </script>
-    <title>App</title>
+    <title>Journ-it</title>
 </head>
 <body>
     <div class="wrapper">
@@ -24,7 +26,7 @@
             <form  id='journalentry'>
                 <textarea  id="textentry" name="textentry" rows="4" cols="50" maxlength="300" minlength="10" 
                 onkeyup="countChars('textentry','charcount');" 
-                onkeydown="countChars('textentry','charcount');" onmouseout="countChars('textentry','charcount');"></textarea>
+                onkeydown="countChars('textentry','charcount');" onmouseout="countChars('textentry','charcount');" placeholder="Tell us about your day!"></textarea>
                 <span id="charcount">0/300</span>
                 <br><br>
                 <form id = "gifSearch">
