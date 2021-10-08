@@ -83,6 +83,7 @@ async function getAll(){
             let card = document.createElement('div');
             card.classList.add('card')
             card.id = `card${i}`
+
             card.innerHTML = `<a class='entryContent' href="client/thread.html?${jsonData[i].id}">${jsonData[i].body}</a>
             <div class='bottomBar'>
             <div id='reaction--container'>
@@ -105,6 +106,7 @@ async function getAll(){
 function journalPost(){
     journalEntry.addEventListener('submit', (e) => {
         e.preventDefault();
+
         let entryContent = e.target.textentry.value
         if(entryContent){
             const entry = {
@@ -120,6 +122,7 @@ function journalPost(){
                 }
             };
             
+
             fetch('https://journ-itapi.herokuapp.com/', methods)
             .then(res => {
                 res.json()
@@ -127,12 +130,10 @@ function journalPost(){
                 document.querySelector('#textentry').value ='';
                 location.reload()
             })
-        } else {
-            alert('Please enter a post of more than 10 characters')
-        }
-
+        } else {alert('Please enter a post of more than 10 characters')}
     })
 }
+
 getAll()
 journalPost()
 
